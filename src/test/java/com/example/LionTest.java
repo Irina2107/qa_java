@@ -35,4 +35,5 @@ public class LionTest {
     public void lionHaveManeFemaleTest() {
         assertEquals("У самца есть грива, а у самки - нет", false, lionFemale.doesHaveMane());
     }
+
 }

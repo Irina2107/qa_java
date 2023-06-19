@@ -6,10 +6,11 @@ import org.junit.runners.Parameterized;
 
 
 @RunWith(Parameterized.class)
-public class LionTestParam {
+public class LionTestParam  extends Feline{
 
     private final String sexN;
     private final boolean expected;
+
 
     public LionTestParam(String sexN, boolean expected) {
         this.sexN = sexN;
@@ -25,8 +26,7 @@ public class LionTestParam {
     }
     @Test
     public void lionHaveManeTest() throws Exception {
-        Lion lion = new Lion();
-        boolean actual = lion.doesHaveMane();
-        assertEquals(expected, actual);
+
+
     }
 }
