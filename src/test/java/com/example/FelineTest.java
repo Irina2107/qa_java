@@ -12,7 +12,6 @@ import java.util.List;
 public class FelineTest {
     @Mock
     Animal animal;
-
     Feline feline = new Feline();
 
     @Test
@@ -22,7 +21,6 @@ public class FelineTest {
         String expectedCatFamily = "Кошачьи";
         Assert.assertEquals(expectedCatFamily, feline.getFamily());
     }
-
     @Test
     public void testGetKittens() {
         //Act

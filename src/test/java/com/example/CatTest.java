@@ -23,19 +23,14 @@ public class CatTest {
 
     @Test
     public void eatFoodCatTest() throws Exception{
-        when(feline.eatMeat()).thenReturn(List.of("Животные", "Птицы", "Рыба"));
-        Assert.assertEquals(List.of("Животные", "Птицы", "Рыба"), cat.getFood());
+        List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
+        when(feline.eatMeat()).thenReturn(expectedFood);
+        Assert.assertEquals(expectedFood, cat.getFood());
     }
     @Test
     public void getSoundCatTest() {
-
-        //Arrange
         Cat cat = new Cat(feline);
-        //Act
         String actualSoundCat = cat.getSound();
-        //  System.out.println(actualSoundCat);
-        //Assert
         assertEquals("Кошка мяукает", "Мяу", actualSoundCat);
     }
-
 }
