@@ -3,10 +3,9 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.mockito.Mock;
 
 @RunWith(Parameterized.class)
-public class LionTestParam  extends Feline{
+public class LionTestParam{
 
     private final String sexN;
     private final boolean expected;
@@ -20,12 +19,12 @@ public class LionTestParam  extends Feline{
         return new Object[][]{
                 {"Самец", true},
                 {"Самка", false},
-        };
+                {"Жираф", true},
+                {"Котёнок", false}
+          };
     }
-    @Mock
-    Feline feline;
-
-    @Test
+     Feline feline = new Feline();
+     @Test
     public void lionHaveManeTest() throws Exception {
         Lion lion = new Lion(sexN, feline);
         boolean actual = lion.doesHaveMane();
