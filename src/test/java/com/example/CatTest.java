@@ -14,12 +14,10 @@ public class CatTest {
     @Mock
     private Feline feline;
     private Cat cat;
-
     @Before
     public void setCat() {
         cat = new Cat(feline);
     }
-
     @Test
     public void eatFoodCatTest() throws Exception{
         List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
